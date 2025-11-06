@@ -1,0 +1,389 @@
+/* ======== IMPORT POLICE ======== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* ======== RESET GLOBAL ======== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ======== LOGO ======== */
+#logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 30px auto 15px auto;
+    border: 4px solid #ba68c8;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+#logo:hover {
+    transform: scale(1.1) rotate(-5deg);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.3);
+    border-color: #8e24aa;
+}
+
+/* ======== BODY ======== */
+body {
+    background: linear-gradient(120deg, #f3e5f5, #e1bee7);
+    color: #4a148c;
+    line-height: 1.6;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ======== HEADER ======== */
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(90deg, #7e57c2, #ab47bc);
+    color: white;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ======== NAVBAR TOP (RECHERCHE ET PANIER) ======== */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #6a1b9a;
+}
+
+.search-box {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-box input {
+    border: none;
+    padding: 8px 15px;
+    width: 250px;
+    outline: none;
+    font-size: 1em;
+    color: #333;
+}
+
+.search-box button {
+    background-color: #8e24aa;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #ba68c8;
+}
+
+.cart-icon {
+    font-size: 1.5em;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+    color: #ffe066;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #ff6f61;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.7em;
+    font-weight: 700;
+}
+
+/* ======== SECTION CATEGORIES ======== */
+.categories {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    display: grid; /* Utilisation de Grid pour un alignement parfait */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 280px pour les cartes */
+    gap: 30px;
+    align-items: stretch; /* Très important pour égaliser les hauteurs des cartes */
+}
+
+#p1 {
+    grid-column: 1 / -1; /* Permet au titre de prendre toute la largeur de la grille */
+    width: 100%;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #6a1b9a;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#p1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ab47bc;
+    margin: 8px auto;
+    border-radius: 2px;
+}
+
+/* ======== CARTES DE CATEGORIES ET ARTICLES (STYLE MODERNE) ======== */
+.category-card, .produit-card {
+    background: linear-gradient(135deg, #e1bee7, #ce93d8);
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 8px 8px 15px rgba(0,0,0,0.1), -8px -8px 15px rgba(255,255,255,0.6);
+    transition: all 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+.category-card:hover, .produit-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 12px 12px 20px rgba(0,0,0,0.15), -12px -12px 20px rgba(255,255,255,0.5);
+}
+
+/* Contenu interne */
+.card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+/* Images */
+.category-card img, .produit-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.4s, box-shadow 0.3s;
+}
+
+.category-card:hover img, .produit-card:hover img {
+    transform: scale(1.06);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Titres et descriptions */
+.category-card h3, .produit-card h3 {
+    font-size: 1.3em;
+    color: #4a148c;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+}
+
+.category-card p, .produit-card .description {
+    font-size: 0.95em;
+    color: #4a148c;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+/* Prix */
+.produit-card .prix {
+    margin-bottom: 1rem;
+}
+
+.produit-card .prix span {
+    font-weight: bold;
+    color: #6a1b9a;
+}
+
+/* Boutons */
+.category-card a, .btn-voir, .btn-panier {
+    display: inline-block;
+    background: linear-gradient(90deg, #8e24aa, #ba68c8);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.category-card a:hover, .btn-voir:hover, .btn-panier:hover {
+    background: linear-gradient(90deg, #ba68c8, #8e24aa);
+    transform: scale(1.07);
+}
+
+/* Groupe de boutons dans la carte produit */
+.produit-card .card-content .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+}
+
+/* Bouton panier plein largeur */
+.btn-panier {
+    width: 100%;
+}
+
+/* Formulaire d'achat */
+.form-achat {
+    display: none;
+    text-align: left;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    width: 100%;
+    backdrop-filter: blur(5px); /* effet verre dépoli */
+}
+
+.form-achat label {
+    font-weight: 600;
+    display: block;
+    margin: 0.4rem 0;
+}
+
+.form-achat input[type="text"], .form-achat input[type="radio"] {
+    margin-bottom: 0.8rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    background: linear-gradient(90deg, #7e57c2, #ab47bc);
+    color: white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: 50px;
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
+}
+
+footer a {
+    color: #ffe066;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffb703;
+}
+
+footer a:hover {
+    color: #ffb703;
+}
+
+/* ======== ANIMATIONS ======== */
+@keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== RESPONSIVE (AJUSTÉ) ======== */
+@media (max-width: 768px) {
+    .search-box { display: none; }
+    .top-nav { justify-content: flex-end; }
+    header h1 { font-size: 1.8em; }
+    
+    .categories {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Réduction de la taille minimale */
+        gap: 20px;
+        padding: 20px 15px;
+    }
+    
+    .category-card, .produit-card { 
+        width: 100%; /* Prend toute la largeur disponible sur les petits écrans */
+    }
+    
+    .category-card img, .produit-card img {
+        height: 180px; /* Ajuster la hauteur de l'image sur les petits écrans */
+    }
+
+    #p1 { font-size: 1.5em; }
+}
+
+@media (max-width: 480px) {
+    header h1 { font-size: 1.5em; }
+    .categories {
+        grid-template-columns: 1fr; /* Une seule colonne sur les très petits écrans */
+        padding: 15px;
+        gap: 15px;
+    }
+    .btn-panier, .btn-voir {
+        width: 100%;
+    }
+    .produit-card .card-content .button-group {
+        flex-direction: column; /* Les boutons s'empilent sur les très petits écrans */
+        align-items: stretch;
+    }
+    .btn-voir {
+        margin-bottom: 10px; /* Ajout de marge entre les boutons si empilés */
+    }
+}
+
+/* Style spécifique pour la page articleEnfants.html (Photo 2) */
+/* Supposons que le conteneur principal de la page articleEnfants soit appelé .produits-enfants */
+.produits-enfants {
+    display: flex;
+    flex-direction: column; /* Force les articles à s'aligner verticalement */
+    align-items: center; /* Centre les articles si le conteneur est plus large */
+    gap: 30px; /* Espace entre les articles */
+    padding: 30px;
+    max-width: 600px; /* Une largeur maximale pour un affichage vertical propre */
+    margin: 30px auto;
+}
+
+/* Ajustement pour les cartes produits dans un flux vertical */
+.produits-enfants .produit-card {
+    width: 90%; /* Les cartes prennent une bonne partie de la largeur */
+    max-width: 400px; /* Limiter la largeur des cartes individuelles */
+}
+
+.produits-enfants .produit-card img {
+    height: 250px; /* Un peu plus d'espace pour l'image en mode vertical */
+}
+.produits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}

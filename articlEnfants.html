@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles Enfants - King Shopping</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Script pour afficher/masquer le formulaire -->
+    <script>
+    function toggleForm(button) {
+        const form = button.nextElementSibling; // le formulaire juste après le bouton
+        const isVisible = form.style.display === "block";
+
+        // On bascule l'affichage
+        form.style.display = isVisible ? "none" : "block";
+
+        // On change le texte du bouton
+        button.textContent = isVisible ? "Voir plus" : "Fermer";
+    }
+    </script>
+
+    <header>
+        <h1>Articles pour Enfants 👶</h1>
+        <p>Découvrez nos meilleurs produits pour vos petits trésors</p>
+    </header>
+
+   <main>
+    <div class="produits-container">
+        <!-- Article 1 -->
+        <div class="produit-card">
+            <img src="images/Capture d'écran 2025-11-06 103034.png" alt="Ceinture pour chaise bébé">
+            <h3>Ceinture Pour Chaise Bébé</h3>
+            <p class="prix">Prix : <span>29 DT</span></p>
+            <p class="description">Harnais de sécurité enfant - pratique et confortable.</p>
+            <button class="btn-voir" onclick="toggleForm(this)">Voir plus</button>
+            <form class="form-achat">
+                
+    <label>Nom et prénom :</label>
+    <input type="text" placeholder="Votre nom complet"><br>
+
+    <label>Numéro de téléphone :</label>
+    <input type="text" placeholder="Ex : 22 333 444"><br>
+
+    <label>Gouvernorat :</label>
+    <input type="text" placeholder="Ex : Tunis"><br>
+
+    <label>Adresse :</label>
+    <input type="text" placeholder="Adresse complète"><br>
+     <!-- Quantité -->
+    <label>Quantité :</label>
+    <input type="number" min="1" value="1"><br><br>
+
+    <button type="button" class="btn-panier">Ajouter au panier</button>
+
+
+            </form>
+        </div>
+
+        <!-- Article 2 -->
+        <div class="produit-card">
+            <img src="images/Capture d'écran 2025-11-06 103610.png" alt="Peluche Animée">
+            <h3>Peluche Animée</h3>
+            <p class="prix">Prix : <span>88 DT</span></p>
+            <p class="description">Chaise Bouncer pour Bébé</p>
+            <button class="btn-voir" onclick="toggleForm(this)">Voir plus</button>
+            <form class="form-achat">
+               <label>Nom et prénom :</label>
+    <input type="text" placeholder="Votre nom complet"><br>
+
+    <label>Numéro de téléphone :</label>
+    <input type="text" placeholder="Ex : 22 333 444"><br>
+
+    <label>Gouvernorat :</label>
+    <input type="text" placeholder="Ex : Tunis"><br>
+
+    <label>Adresse :</label>
+    <input type="text" placeholder="Adresse complète"><br>
+     <!-- Quantité -->
+    <label>Quantité :</label>
+    <input type="number" min="1" value="1"><br><br>
+
+    <button type="button" class="btn-panier">Ajouter au panier</button>
+
+            </form>
+        </div>
+
+        <!-- Article 3 -->
+        <div class="produit-card">
+            <img src="images/Capture d'écran 2025-11-06 103705.png" alt="Ceinture pour chaise bébé">
+            <h3>Ceinture Pour Chaise Bébé</h3>
+            <p class="prix">Prix : <span>99 DT</span></p>
+            <p class="description">Balançoire pour enfant</p>
+            <button class="btn-voir" onclick="toggleForm(this)">Voir plus</button>
+            <form class="form-achat">
+                <!-- Formulaire -->
+                 <label>Nom et prénom :</label>
+    <input type="text" placeholder="Votre nom complet"><br>
+
+    <label>Numéro de téléphone :</label>
+    <input type="text" placeholder="Ex : 22 333 444"><br>
+
+    <label>Gouvernorat :</label>
+    <input type="text" placeholder="Ex : Tunis"><br>
+
+    <label>Adresse :</label>
+    <input type="text" placeholder="Adresse complète"><br>
+     <!-- Quantité -->
+    <label>Quantité :</label>
+    <input type="number" min="1" value="1"><br><br>
+
+    <button type="button" class="btn-panier">Ajouter au panier</button>
+
+            </form>
+        </div>
+
+        <!-- Article 4 -->
+        <div class="produit-card">
+            <img src="images/Capture d'écran 2025-11-06 103729.png" alt="Ceinture pour chaise bébé">
+            <h3>Ceinture Pour Chaise Bébé</h3>
+            <p class="prix">Prix : <span>69 DT</span></p>
+            <p class="description">Tricycle Winnie l'Ourson</p>
+            <button class="btn-voir" onclick="toggleForm(this)">Voir plus</button>
+            <form class="form-achat">
+                <!-- Formulaire -->
+                 <label>Nom et prénom :</label>
+    <input type="text" placeholder="Votre nom complet"><br>
+
+    <label>Numéro de téléphone :</label>
+    <input type="text" placeholder="Ex : 22 333 444"><br>
+
+    <label>Gouvernorat :</label>
+    <input type="text" placeholder="Ex : Tunis"><br>
+
+    <label>Adresse :</label>
+    <input type="text" placeholder="Adresse complète"><br>
+     <!-- Quantité -->
+    <label>Quantité :</label>
+    <input type="number" min="1" value="1"><br><br>
+
+    <button type="button" class="btn-panier">Ajouter au panier</button>
+
+            </form>
+        </div>
+    </div>
+</main>
+
+    <footer>
+        <p>&copy; 2025 King Shopping. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
